@@ -1,0 +1,34 @@
+/* styles.css */
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 100px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.form input {
+	padding: 10px;
+	margin-bottom: 10px;
+	width: 300px;
+}
+
+.form button {
+	padding: 10px 20px;
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.message {
+	margin-bottom: 10px;
+	color: red;
+}
