@@ -19,7 +19,8 @@ export const LoginScreen = () => {
 				email,
 				password,
 			});
-			console.log(resp);
+
+			localStorage.setItem('token', resp.data.token);
 
 			navigate('/home');
 		} catch (error) {

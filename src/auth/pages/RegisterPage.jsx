@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import '../css/auth.css';
 import pruebaApi from '../../api/pruebaApi.js';
+import { useNavigate } from 'react-router';
 
 export const RegisterPage = () => {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+
+	const navigate = useNavigate();
 
 	const handleRegister = async (e) => {
 		e.preventDefault();
@@ -20,7 +23,9 @@ export const RegisterPage = () => {
 				password,
 			});
 
-			console.log(resp);
+			localStorage.setItem('token', resp.data.token);
+
+			navigate('/home');
 		} catch (error) {
 			console.log(error);
 		}
